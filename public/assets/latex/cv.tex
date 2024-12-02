@@ -1,0 +1,81 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Package includes
+\usepackage[a4paper, ignoreheadfoot, top=2cm, bottom=2cm, left=2cm, right=2cm, footskip=1.0cm]{geometry}
+\usepackage[dvipsnames]{xcolor} % for color support
+\usepackage[utf8]{inputenc} % encoding
+\usepackage{fontenc} % font encoding
+\usepackage{hyperref} % for links and metadata
+\usepackage{amsmath} % for math support
+\usepackage{enumitem} % for custom lists
+\usepackage{titlesec} % for customizing section titles
+\usepackage{eso-pic} % for floating text on pages
+
+% Custom colors
+\definecolor{primaryColor}{RGB}{0, 0, 0} % black primary color
+
+% Margin settings
+\setlength{\parindent}{0pt} % no indentation
+\setlength{\columnsep}{0.15cm} % spacing between columns
+
+% Header format
+\newcommand{\header}{
+    \begin{center}
+        \textbf{\Huge John Doe} \\
+        \vspace{10pt}
+        \href{mailto:johndoe@example.com}{johndoe@example.com} \\
+        +12 345 678 90 \\
+        \href{https://linkedin.com/in/johndoe}{linkedin.com/in/johndoe} \\
+        \href{https://github.com/johndoe}{github.com/johndoe}
+    \end{center}
+}
+
+% Define a custom highlights list environment
+\newenvironment{highlights}{
+    \begin{itemize}[topsep=0.10cm, parsep=0.10cm, partopsep=0pt, itemsep=0.5pt, leftmargin=0cm]
+}{
+    \end{itemize}
+}
+
+% Section formatting
+\titleformat{\section}[block]{\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}[runin]{\bfseries}{\thesubsection}{1em}{}
+
+\begin{document}
+
+% Insert header
+\header
+
+% Section: Technologies
+\section*{Technologies}
+\begin{highlights}
+    \item Languages: Python, Java, C++
+    \item Frameworks: Django, Flask, React
+    \item Technologies: Docker, Kubernetes, AWS
+    \item Tools: Git, Jira, Jenkins
+\end{highlights}
+
+% Section: Experience
+\section*{Experience}
+\textbf{Software Engineer}, Company A \hfill 2019 -- Present
+\begin{highlights}
+    \item Developed and maintained web applications using Django
+    \item Led a team of 3 engineers on a cloud migration project
+    \item Optimized database queries, improving performance by 20\%
+\end{highlights}
+
+\textbf{Junior Developer}, Company B \hfill 2017 -- 2019
+\begin{highlights}
+    \item Implemented features using React and Redux
+    \item Wrote unit tests to ensure code quality
+    \item Assisted in debugging and troubleshooting issues
+\end{highlights}
+
+% Section: Education
+\section*{Education}
+\textbf{University of XYZ}, Bachelor of Science in Computer Science \hfill 2015 -- 2019
+\begin{highlights}
+    \item Relevant Coursework: Algorithms, Data Structures, Web Development
+\end{highlights}
+
+\end{document}
